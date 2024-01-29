@@ -1025,3 +1025,424 @@ Python 3.9.18 (main, Jan 17 2024, 07:02:31)
 [GCC 12.2.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>> print("hello worlds")
+
+  bash MEM: 19.91% | 1/7GB   0ms                                                                                                  main ≡  ?2 
+╭─ ♥ 17:29 | workspaces  data-engineering-zoomcamp 
+╰─ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+  bash MEM: 25.52% | 2/7GB   20ms                                                                                                 main ≡  ?2 
+╭─ ♥ 17:31 | workspaces  data-engineering-zoomcamp 
+╰─ docker run -itd --entrypoint=bash python:3.9
+e69684e887f990bd1800fd3e31abe04e85086070a7c32c054ba446429fff6111
+
+  bash MEM: 25.48% | 2/7GB   583ms                                                                                                main ≡  ?2 
+╭─ ♥ 17:32 | workspaces  data-engineering-zoomcamp 
+╰─ docker ps
+CONTAINER ID   IMAGE        COMMAND   CREATED         STATUS         PORTS     NAMES
+e69684e887f9   python:3.9   "bash"    6 seconds ago   Up 5 seconds             priceless_gould
+
+  bash MEM: 25.58% | 2/7GB   21ms                                                                                                 main ≡  ?2 
+╭─ ♥ 17:32 | workspaces  data-engineering-zoomcamp 
+╰─ docker attach --detach-keys="ctrl-a,ctrl-x" e69684e887f9
+root@e69684e887f9:/# python
+Python 3.9.18 (main, Jan 17 2024, 07:02:31) 
+[GCC 12.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> pip pgcli
+  File "<stdin>", line 1
+    pip pgcli
+        ^
+SyntaxError: invalid syntax
+>>> read escape sequence
+
+  bash MEM: 29.7% | 2/7GB   9m 23s 15ms                                                                                           main ≡  ?2 
+╭─ ♥ 17:42 | workspaces  data-engineering-zoomcamp 
+╰─ docker attach --detach-keys="ctrl-a,ctrl-x" e69684e887f9
+>>> pyhton
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'pyhton' is not defined
+>>> python
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'python' is not defined
+>>> exit
+Use exit() or Ctrl-D (i.e. EOF) to exit
+>>> exit()
+root@e69684e887f9:/# install pgcli
+install: missing destination file operand after 'pgcli'
+Try 'install --help' for more information.
+root@e69684e887f9:/# pip install pgcli
+Collecting pgcli
+  Downloading pgcli-4.0.1-py3-none-any.whl (83 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.0/83.0 kB 3.3 MB/s eta 0:00:00
+Collecting psycopg>=3.0.14
+  Downloading psycopg-3.1.17-py3-none-any.whl (178 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 178.0/178.0 kB 9.7 MB/s eta 0:00:00
+Collecting setproctitle>=1.1.9
+  Downloading setproctitle-1.3.3-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (30 kB)
+Collecting sqlparse<0.5,>=0.3.0
+  Downloading sqlparse-0.4.4-py3-none-any.whl (41 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.2/41.2 kB 2.4 MB/s eta 0:00:00
+Collecting click>=4.1
+  Downloading click-8.1.7-py3-none-any.whl (97 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.9/97.9 kB 5.9 MB/s eta 0:00:00
+Collecting Pygments>=2.0
+  Downloading pygments-2.17.2-py3-none-any.whl (1.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 36.5 MB/s eta 0:00:00
+Collecting pgspecial>=2.0.0
+  Downloading pgspecial-2.1.1-py3-none-any.whl (35 kB)
+Collecting cli-helpers[styles]>=2.2.1
+  Downloading cli_helpers-2.3.0-py3-none-any.whl (19 kB)
+Collecting pendulum>=2.1.0
+  Downloading pendulum-3.0.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (385 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 385.2/385.2 kB 19.7 MB/s eta 0:00:00
+Collecting configobj>=5.0.6
+  Downloading configobj-5.0.8-py2.py3-none-any.whl (36 kB)
+Collecting prompt-toolkit<4.0.0,>=2.0.6
+  Downloading prompt_toolkit-3.0.43-py3-none-any.whl (386 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 386.1/386.1 kB 19.8 MB/s eta 0:00:00
+Collecting tabulate[widechars]>=0.8.2
+  Downloading tabulate-0.9.0-py3-none-any.whl (35 kB)
+Collecting six
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting python-dateutil>=2.6
+  Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.7/247.7 kB 14.0 MB/s eta 0:00:00
+Collecting time-machine>=2.6.0
+  Downloading time_machine-2.13.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (34 kB)
+Collecting tzdata>=2020.1
+  Downloading tzdata-2023.4-py2.py3-none-any.whl (346 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 346.6/346.6 kB 18.4 MB/s eta 0:00:00
+Collecting wcwidth
+  Downloading wcwidth-0.2.13-py2.py3-none-any.whl (34 kB)
+Collecting typing-extensions>=4.1
+  Downloading typing_extensions-4.9.0-py3-none-any.whl (32 kB)
+Installing collected packages: wcwidth, tzdata, typing-extensions, tabulate, sqlparse, six, setproctitle, Pygments, prompt-toolkit, click, python-dateutil, psycopg, configobj, time-machine, pgspecial, cli-helpers, pendulum, pgcli
+Successfully installed Pygments-2.17.2 cli-helpers-2.3.0 click-8.1.7 configobj-5.0.8 pendulum-3.0.0 pgcli-4.0.1 pgspecial-2.1.1 prompt-toolkit-3.0.43 psycopg-3.1.17 python-dateutil-2.8.2 setproctitle-1.3.3 six-1.16.0 sqlparse-0.4.4 tabulate-0.9.0 time-machine-2.13.0 typing-extensions-4.9.0 tzdata-2023.4 wcwidth-0.2.13
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+[notice] A new release of pip is available: 23.0.1 -> 23.3.2
+[notice] To update, run: pip install --upgrade pip
+root@e69684e887f9:/# pgcli --help
+Usage: pgcli [OPTIONS] [DBNAME] [USERNAME]
+
+Options:
+  -h, --host TEXT         Host address of the postgres database.
+  -p, --port INTEGER      Port number at which the postgres instance is
+                          listening.
+  -U, --username TEXT     Username to connect to the postgres database.
+  -u, --user TEXT         Username to connect to the postgres database.
+  -W, --password          Force password prompt.
+  -w, --no-password       Never prompt for password.
+  --single-connection     Do not use a separate connection for completions.
+  -v, --version           Version of pgcli.
+  -d, --dbname TEXT       database name to connect to.
+  --pgclirc FILE          Location of pgclirc file.
+  -D, --dsn TEXT          Use DSN configured into the [alias_dsn] section of
+                          pgclirc file.
+  --list-dsn              list of DSN configured into the [alias_dsn] section
+                          of pgclirc file.
+  --row-limit INTEGER     Set threshold for row limit prompt. Use 0 to disable
+                          prompt.
+  --less-chatty           Skip intro on startup and goodbye on exit.
+  --prompt TEXT           Prompt format (Default: "\u@\h:\d> ").
+  --prompt-dsn TEXT       Prompt format for connections using DSN aliases
+                          (Default: "\u@\h:\d> ").
+  -l, --list              list available databases, then exit.
+  --auto-vertical-output  Automatically switch to vertical output mode if the
+                          result is wider than the terminal width.
+  --warn TEXT             Warn before running a destructive query.
+  --ssh-tunnel TEXT       Open an SSH tunnel to the given address and connect
+                          to the database from it.
+  --help                  Show this message and exit.
+root@e69684e887f9:/# pgcli -h localhost -p 5432 -u root -d ny_taxi
+connection is bad: :1", port 5432 failed: Cannot assign requested address
+        Is the server running on that host and accepting TCP/IP connections?
+root@e69684e887f9:/# docker run -it \
+  -e POSTGRES_USER="root" \
+  -e POSTGRES_PASSWORD="root" \
+  -e POSTGRES_DB="ny_taxi" \
+  -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data \
+  -p 5432:5432 \
+  postgres:13
+bash: docker: command not found
+root@e69684e887f9:/# read escape sequence
+
+  bash MEM: 33.54% | 2/7GB   20m 0s 430ms                                                                                                 main ≡  ?2 
+╭─ ♥ 18:02 | workspaces  data-engineering-zoomcamp 
+╰─ docker run -it \
+  -e POSTGRES_USER="root" \
+  -e POSTGRES_PASSWORD="root" \
+  -e POSTGRES_DB="ny_taxi" \
+  -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data \
+  -p 5432:5432 \
+  postgres:13
+Unable to find image 'postgres:13' locally
+13: Pulling from library/postgres
+2f44b7a888fa: Pulling fs layer 
+a7f35665fcb5: Pulling fs layer 
+084e7cac132b: Pulling fs layer 
+3dfd9d3ef559: Pulling fs layer 
+f9a86bb2457f: Pulling fs layer 
+fe977d323b28: Pulling fs layer 
+683d6af0b661: Pull complete 
+9d6cf683eb24: Pull complete 
+e3dde9f5a40c: Pull complete 
+0c6134ad6fc1: Pull complete 
+b1aae309429c: Pull complete 
+b9fca0bb2c78: Pull complete 
+a7ce99218bd0: Pull complete 
+79e76ae8b2b7: Pull complete 
+Digest: sha256:f45fd21264472523c7a8918cce05a81febac1ca0d33bb45529f8b819a877eb80
+Status: Downloaded newer image for postgres:13
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+initdb: warning: enabling "trust" authentication for local connections
+You can change this by editing pg_hba.conf or using the option -A, or
+--auth-local and --auth-host, the next time you run initdb.
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgresql/data -l logfile start
+
+waiting for server to start....2024-01-29 22:03:06.592 UTC [49] LOG:  starting PostgreSQL 13.13 (Debian 13.13-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+2024-01-29 22:03:06.602 UTC [49] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-01-29 22:03:06.633 UTC [50] LOG:  database system was shut down at 2024-01-29 22:03:04 UTC
+2024-01-29 22:03:06.649 UTC [49] LOG:  database system is ready to accept connections
+ done
+server started
+CREATE DATABASE
+
+
+/usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+
+waiting for server to shut down....2024-01-29 22:03:07.588 UTC [49] LOG:  received fast shutdown request
+2024-01-29 22:03:07.600 UTC [49] LOG:  aborting any active transactions
+2024-01-29 22:03:07.607 UTC [49] LOG:  background worker "logical replication launcher" (PID 56) exited with exit code 1
+2024-01-29 22:03:07.612 UTC [51] LOG:  shutting down
+2024-01-29 22:03:07.674 UTC [49] LOG:  database system is shut down
+ done
+server stopped
+
+PostgreSQL init process complete; ready for start up.
+
+2024-01-29 22:03:07.732 UTC [1] LOG:  starting PostgreSQL 13.13 (Debian 13.13-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+2024-01-29 22:03:07.732 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-01-29 22:03:07.732 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2024-01-29 22:03:07.752 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-01-29 22:03:07.773 UTC [64] LOG:  database system was shut down at 2024-01-29 22:03:07 UTC
+2024-01-29 22:03:07.793 UTC [1] LOG:  database system is ready to accept connections
+2024-01-29 22:03:18.854 UTC [71] LOG:  invalid length of startup packet
+2024-01-29 22:03:18.880 UTC [72] LOG:  invalid length of startup packet
+2024-01-29 22:03:18.898 UTC [73] LOG:  invalid length of startup packet
+2024-01-29 22:03:18.916 UTC [74] LOG:  invalid length of startup packet
+docker attach --detach-keys="ctrl-a,ctrl-x" e69684e887f9
+exit()
+2024-01-29 22:06:28.399 UTC [1] LOG:  received fast shutdown request
+2024-01-29 22:06:28.409 UTC [1] LOG:  aborting any active transactions
+2024-01-29 22:06:28.418 UTC [1] LOG:  background worker "logical replication launcher" (PID 70) exited with exit code 1
+2024-01-29 22:06:28.420 UTC [65] LOG:  shutting down
+2024-01-29 22:06:28.504 UTC [1] LOG:  database system is shut down
+
+  bash MEM: 33.24% | 2/7GB   3m 37s 998ms                                                                                                 main ≡  ?2 
+╭─ ♥ 18:06 | workspaces  data-engineering-zoomcamp 
+╰─ docker ps
+CONTAINER ID   IMAGE        COMMAND   CREATED          STATUS          PORTS     NAMES
+e69684e887f9   python:3.9   "bash"    34 minutes ago   Up 34 minutes             priceless_gould
+
+  bash MEM: 33.28% | 2/7GB   22ms                                                                                                         main ≡  ?2 
+╭─ ♥ 18:06 | workspaces  data-engineering-zoomcamp 
+╰─ pgcli -h localhost -p 5432 -u root -d ny_taxi
+bash: pgcli: command not found
+
+  bash MEM: 34.16% | 2/7GB   9ms                                                                                                          main ≡  ?2 
+╭─ ♥ 18:07 | workspaces  data-engineering-zoomcamp 
+╰─ docker attach --detach-keys="ctrl-a,ctrl-x" e69684e887f9
+
+  bash MEM: 33.55% | 2/7GB   1m 0s 866ms                                                                                                  main ≡  ?2 
+╭─ ♥ 18:09 | workspaces  data-engineering-zoomcamp 
+╰─ docker
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Common Commands:
+  run         Create and run a new container from an image
+  exec        Execute a command in a running container
+  ps          List containers
+  build       Build an image from a Dockerfile
+  pull        Download an image from a registry
+  push        Upload an image to a registry
+  images      List images
+  login       Log in to a registry
+  logout      Log out from a registry
+  search      Search Docker Hub for images
+  version     Show the Docker version information
+  info        Display system-wide information
+
+Management Commands:
+  builder     Manage builds
+  buildx*     Docker Buildx (Docker Inc., 0.12.1-1)
+  compose*    Docker Compose (Docker Inc., 2.23.3-1)
+  container   Manage containers
+  context     Manage contexts
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  plugin      Manage plugins
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Swarm Commands:
+  swarm       Manage Swarm
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+Global Options:
+      --config string      Location of client config files (default "/home/vscode/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket to connect to
+  -l, --log-level string   Set the logging level ("debug", "info", "warn", "error", "fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/home/vscode/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/home/vscode/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/home/vscode/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Run 'docker COMMAND --help' for more information on a command.
+
+For more help on how to use Docker, head to https://docs.docker.com/go/guides/
+
+  bash MEM: 33.66% | 2/7GB   288ms                                                                                                        main ≡  ?2 
+╭─ ♥ 18:09 | workspaces  data-engineering-zoomcamp 
+╰─ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+  bash MEM: 33.59% | 2/7GB   22ms                                                                                                         main ≡  ?2 
+╭─ ♥ 18:09 | workspaces  data-engineering-zoomcamp 
+╰─ docker run -itd --entrypoint=bash python:3.9
+d715669eeef8bddc986d61d69b9f3be2da481d3ebad4bdedbf5779cd7d76ab62
+
+  bash MEM: 33.66% | 2/7GB   676ms                                                                                                        main ≡  ?2 
+╭─ ♥ 18:10 | workspaces  data-engineering-zoomcamp 
+╰─ docker ps
+CONTAINER ID   IMAGE        COMMAND   CREATED          STATUS          PORTS     NAMES
+d715669eeef8   python:3.9   "bash"    18 seconds ago   Up 17 seconds             youthful_bouman
+
+  bash MEM: 33.1% | 2/7GB   21ms                                                                                                          main ≡  ?2 
+╭─ ♥ 18:10 | workspaces  data-engineering-zoomcamp 
+╰─ docker run -it \
+  -e POSTGRES_USER="root" \
+  -e POSTGRES_PASSWORD="root" \
+  -e POSTGRES_DB="ny_taxi" \
+  -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data \
+  -p 5432:5432 \
+  postgres:13
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+initdb: warning: enabling "trust" authentication for local connections
+You can change this by editing pg_hba.conf or using the option -A, or
+--auth-local and --auth-host, the next time you run initdb.
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgresql/data -l logfile start
+
+waiting for server to start....2024-01-29 22:17:46.984 UTC [48] LOG:  starting PostgreSQL 13.13 (Debian 13.13-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+2024-01-29 22:17:46.994 UTC [48] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-01-29 22:17:47.025 UTC [49] LOG:  database system was shut down at 2024-01-29 22:17:44 UTC
+2024-01-29 22:17:47.040 UTC [48] LOG:  database system is ready to accept connections
+ done
+server started
+CREATE DATABASE
+
+
+/usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+
+2024-01-29 22:17:47.961 UTC [48] LOG:  received fast shutdown request
+waiting for server to shut down....2024-01-29 22:17:47.972 UTC [48] LOG:  aborting any active transactions
+2024-01-29 22:17:47.975 UTC [48] LOG:  background worker "logical replication launcher" (PID 55) exited with exit code 1
+2024-01-29 22:17:47.982 UTC [50] LOG:  shutting down
+2024-01-29 22:17:48.049 UTC [48] LOG:  database system is shut down
+ done
+server stopped
+
+PostgreSQL init process complete; ready for start up.
+
+2024-01-29 22:17:48.114 UTC [1] LOG:  starting PostgreSQL 13.13 (Debian 13.13-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+2024-01-29 22:17:48.115 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-01-29 22:17:48.116 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2024-01-29 22:17:48.142 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-01-29 22:17:48.165 UTC [63] LOG:  database system was shut down at 2024-01-29 22:17:48 UTC
+2024-01-29 22:17:48.180 UTC [1] LOG:  database system is ready to accept connections
+exit()
