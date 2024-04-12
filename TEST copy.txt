@@ -1570,4 +1570,252 @@ Password for root:
 Server: PostgreSQL 13.14 (Debian 13.14-1.pgdg120+2)
 Version: 4.0.1
 Home: http://pgcli.com
+root@localhost:ny_taxi> \dt
++--------+------+------+-------+
+| Schema | Name | Type | Owner |
+|--------+------+------+-------|
++--------+------+------+-------+
+SELECT 0
+Time: 0.014s
+root@localhost:ny_taxi> SELECT 1;
++----------+
+| ?column? |
+|----------|
+| 1        |
++----------+
+SELECT 1
+Time: 0.005s
 root@localhost:ny_taxi>
+
+
+
+
+
+
+
+
+
+  bash MEM: 26.66% | 2/7GB   0ms                                                                                 main ≡  ?1 
+╭─ ♥ 10:24 | workspaces  zoomcamp 
+╰─ docker ps
+CONTAINER ID   IMAGE         COMMAND                  CREATED         STATUS         PORTS                                       NAMES
+a57f9f225cee   postgres:13   "docker-entrypoint.s…"   6 minutes ago   Up 6 minutes   0.0.0.0:5432->5432/tcp, :::5432->5432/tcp   serene_bouman
+b46abaacf690   python:3.9    "bash"                   7 minutes ago   Up 7 minutes                                               busy_northcutt
+
+  bash MEM: 26.78% | 2/7GB   24ms                                                                                main ≡  ?1 
+╭─ ♥ 10:24 | workspaces  zoomcamp 
+╰─ pip install jupyter
+Collecting jupyter
+  Downloading jupyter-1.0.0-py2.py3-none-any.whl.metadata (995 bytes)
+Collecting notebook (from jupyter)
+  Downloading notebook-7.1.2-py3-none-any.whl.metadata (10 kB)
+Collecting qtconsole (from jupyter)
+  Downloading qtconsole-5.5.1-py3-none-any.whl.metadata (5.1 kB)
+Collecting jupyter-console (from jupyter)
+  Downloading jupyter_console-6.6.3-py3-none-any.whl.metadata (5.8 kB)
+Collecting nbconvert (from jupyter)
+  Downloading nbconvert-7.16.3-py3-none-any.whl.metadata (8.2 kB)
+Requirement already satisfied: ipykernel in /home/vscode/.local/lib/python3.9/site-packages (from jupyter) (6.29.4)
+Collecting ipywidgets (from jupyter)
+  Downloading ipywidgets-8.1.2-py3-none-any.whl.metadata (2.4 kB)
+Requirement already satisfied: comm>=0.1.1 in /home/vscode/.local/lib/python3.9/site-packages (from ipykernel->jupyter) (0.2.2)
+Requirement already satisfied: debugpy>=1.6.5 in /home/vscode/.local/lib/python3.9/site-packages (from ipykernel->jupyter) (1.8.1)
+Requirement already satisfied: ipython>=7.23.1 in /home/vscode/.local/lib/python3.9/site-packages (from ipykernel->jupyter) (8.18.1)
+Requirement already satisfied: jupyter-client>=6.1.12 in /home/vscode/.local/lib/python3.9/site-packages (from ipykernel->jupyter) (8.6.1)
+Requirement already satisfied: jupyter-core!=5.0.*,>=4.12 in /home/vscode/.local/lib/python3.9/site-packages (from ipykernel->jupyter) (5.7.2)
+Requirement already satisfied: matplotlib-inline>=0.1 in /home/vscode/.local/lib/python3.9/site-packages (from ipykernel->jupyter) (0.1.6)
+Requirement already satisfied: nest-asyncio in /home/vscode/.local/lib/python3.9/site-packages (from ipykernel->jupyter) (1.6.0)
+Requirement already satisfied: packaging in /home/vscode/.local/lib/python3.9/site-packages (from ipykernel->jupyter) (24.0)
+Requirement already satisfied: psutil in /home/vscode/.local/lib/python3.9/site-packages (from ipykernel->jupyter) (5.9.8)
+Requirement already satisfied: pyzmq>=24 in /home/vscode/.local/lib/python3.9/site-packages (from ipykernel->jupyter) (25.1.2)
+Requirement already satisfied: tornado>=6.1 in /home/vscode/.local/lib/python3.9/site-packages (from ipykernel->jupyter) (6.4)
+Requirement already satisfied: traitlets>=5.4.0 in /home/vscode/.local/lib/python3.9/site-packages (from ipykernel->jupyter) (5.14.2)
+Collecting widgetsnbextension~=4.0.10 (from ipywidgets->jupyter)
+  Downloading widgetsnbextension-4.0.10-py3-none-any.whl.metadata (1.6 kB)
+Collecting jupyterlab-widgets~=3.0.10 (from ipywidgets->jupyter)
+  Downloading jupyterlab_widgets-3.0.10-py3-none-any.whl.metadata (4.1 kB)
+Requirement already satisfied: prompt-toolkit>=3.0.30 in /home/vscode/.local/lib/python3.9/site-packages (from jupyter-console->jupyter) (3.0.43)
+Requirement already satisfied: pygments in /home/vscode/.local/lib/python3.9/site-packages (from jupyter-console->jupyter) (2.17.2)
+Collecting beautifulsoup4 (from nbconvert->jupyter)
+  Downloading beautifulsoup4-4.12.3-py3-none-any.whl.metadata (3.8 kB)
+Collecting bleach!=5.0.0 (from nbconvert->jupyter)
+  Downloading bleach-6.1.0-py3-none-any.whl.metadata (30 kB)
+Collecting defusedxml (from nbconvert->jupyter)
+  Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+Requirement already satisfied: importlib-metadata>=3.6 in /home/vscode/.local/lib/python3.9/site-packages (from nbconvert->jupyter) (6.11.0)
+Requirement already satisfied: jinja2>=3.0 in /home/vscode/.local/lib/python3.9/site-packages (from nbconvert->jupyter) (3.1.3)
+Collecting jupyterlab-pygments (from nbconvert->jupyter)
+  Downloading jupyterlab_pygments-0.3.0-py3-none-any.whl.metadata (4.4 kB)
+Requirement already satisfied: markupsafe>=2.0 in /home/vscode/.local/lib/python3.9/site-packages (from nbconvert->jupyter) (2.1.5)
+Collecting mistune<4,>=2.0.3 (from nbconvert->jupyter)
+  Downloading mistune-3.0.2-py3-none-any.whl.metadata (1.7 kB)
+Collecting nbclient>=0.5.0 (from nbconvert->jupyter)
+  Downloading nbclient-0.10.0-py3-none-any.whl.metadata (7.8 kB)
+Collecting nbformat>=5.7 (from nbconvert->jupyter)
+  Downloading nbformat-5.10.4-py3-none-any.whl.metadata (3.6 kB)
+Collecting pandocfilters>=1.4.1 (from nbconvert->jupyter)
+  Downloading pandocfilters-1.5.1-py2.py3-none-any.whl.metadata (9.0 kB)
+Collecting tinycss2 (from nbconvert->jupyter)
+  Downloading tinycss2-1.2.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting jupyter-server<3,>=2.4.0 (from notebook->jupyter)
+  Downloading jupyter_server-2.14.0-py3-none-any.whl.metadata (8.4 kB)
+Collecting jupyterlab-server<3,>=2.22.1 (from notebook->jupyter)
+  Downloading jupyterlab_server-2.26.0-py3-none-any.whl.metadata (5.9 kB)
+Collecting jupyterlab<4.2,>=4.1.1 (from notebook->jupyter)
+  Downloading jupyterlab-4.1.6-py3-none-any.whl.metadata (16 kB)
+Collecting notebook-shim<0.3,>=0.2 (from notebook->jupyter)
+  Downloading notebook_shim-0.2.4-py3-none-any.whl.metadata (4.0 kB)
+Collecting qtpy>=2.4.0 (from qtconsole->jupyter)
+  Downloading QtPy-2.4.1-py3-none-any.whl.metadata (12 kB)
+Requirement already satisfied: six>=1.9.0 in /home/vscode/.local/lib/python3.9/site-packages (from bleach!=5.0.0->nbconvert->jupyter) (1.16.0)
+Collecting webencodings (from bleach!=5.0.0->nbconvert->jupyter)
+  Downloading webencodings-0.5.1-py2.py3-none-any.whl.metadata (2.1 kB)
+Requirement already satisfied: zipp>=0.5 in /home/vscode/.local/lib/python3.9/site-packages (from importlib-metadata>=3.6->nbconvert->jupyter) (3.18.1)
+Requirement already satisfied: decorator in /home/vscode/.local/lib/python3.9/site-packages (from ipython>=7.23.1->ipykernel->jupyter) (5.1.1)
+Requirement already satisfied: jedi>=0.16 in /home/vscode/.local/lib/python3.9/site-packages (from ipython>=7.23.1->ipykernel->jupyter) (0.19.1)
+Requirement already satisfied: stack-data in /home/vscode/.local/lib/python3.9/site-packages (from ipython>=7.23.1->ipykernel->jupyter) (0.6.3)
+Requirement already satisfied: typing-extensions in /home/vscode/.local/lib/python3.9/site-packages (from ipython>=7.23.1->ipykernel->jupyter) (4.10.0)
+Requirement already satisfied: exceptiongroup in /home/vscode/.local/lib/python3.9/site-packages (from ipython>=7.23.1->ipykernel->jupyter) (1.2.0)
+Requirement already satisfied: pexpect>4.3 in /home/vscode/.local/lib/python3.9/site-packages (from ipython>=7.23.1->ipykernel->jupyter) (4.9.0)
+Requirement already satisfied: python-dateutil>=2.8.2 in /home/vscode/.local/lib/python3.9/site-packages (from jupyter-client>=6.1.12->ipykernel->jupyter) (2.9.0.post0)
+Requirement already satisfied: platformdirs>=2.5 in /home/vscode/.local/lib/python3.9/site-packages (from jupyter-core!=5.0.*,>=4.12->ipykernel->jupyter) (4.2.0)
+Requirement already satisfied: anyio>=3.1.0 in /home/vscode/.local/lib/python3.9/site-packages (from jupyter-server<3,>=2.4.0->notebook->jupyter) (4.3.0)
+Collecting argon2-cffi>=21.1 (from jupyter-server<3,>=2.4.0->notebook->jupyter)
+  Downloading argon2_cffi-23.1.0-py3-none-any.whl.metadata (5.2 kB)
+Collecting jupyter-events>=0.9.0 (from jupyter-server<3,>=2.4.0->notebook->jupyter)
+  Downloading jupyter_events-0.10.0-py3-none-any.whl.metadata (5.9 kB)
+Collecting jupyter-server-terminals>=0.4.4 (from jupyter-server<3,>=2.4.0->notebook->jupyter)
+  Downloading jupyter_server_terminals-0.5.3-py3-none-any.whl.metadata (5.6 kB)
+Collecting overrides>=5.0 (from jupyter-server<3,>=2.4.0->notebook->jupyter)
+  Downloading overrides-7.7.0-py3-none-any.whl.metadata (5.8 kB)
+Collecting prometheus-client>=0.9 (from jupyter-server<3,>=2.4.0->notebook->jupyter)
+  Downloading prometheus_client-0.20.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting send2trash>=1.8.2 (from jupyter-server<3,>=2.4.0->notebook->jupyter)
+  Downloading Send2Trash-1.8.3-py3-none-any.whl.metadata (4.0 kB)
+Collecting terminado>=0.8.3 (from jupyter-server<3,>=2.4.0->notebook->jupyter)
+  Downloading terminado-0.18.1-py3-none-any.whl.metadata (5.8 kB)
+Requirement already satisfied: websocket-client>=1.7 in /home/vscode/.local/lib/python3.9/site-packages (from jupyter-server<3,>=2.4.0->notebook->jupyter) (1.7.0)
+Collecting async-lru>=1.0.0 (from jupyterlab<4.2,>=4.1.1->notebook->jupyter)
+  Downloading async_lru-2.0.4-py3-none-any.whl.metadata (4.5 kB)
+Requirement already satisfied: httpx>=0.25.0 in /home/vscode/.local/lib/python3.9/site-packages (from jupyterlab<4.2,>=4.1.1->notebook->jupyter) (0.27.0)
+Collecting jupyter-lsp>=2.0.0 (from jupyterlab<4.2,>=4.1.1->notebook->jupyter)
+  Downloading jupyter_lsp-2.2.5-py3-none-any.whl.metadata (1.8 kB)
+Collecting tomli>=1.2.2 (from jupyterlab<4.2,>=4.1.1->notebook->jupyter)
+  Downloading tomli-2.0.1-py3-none-any.whl.metadata (8.9 kB)
+Requirement already satisfied: babel>=2.10 in /home/vscode/.local/lib/python3.9/site-packages (from jupyterlab-server<3,>=2.22.1->notebook->jupyter) (2.14.0)
+Collecting json5>=0.9.0 (from jupyterlab-server<3,>=2.22.1->notebook->jupyter)
+  Downloading json5-0.9.24-py3-none-any.whl.metadata (30 kB)
+Requirement already satisfied: jsonschema>=4.18.0 in /home/vscode/.local/lib/python3.9/site-packages (from jupyterlab-server<3,>=2.22.1->notebook->jupyter) (4.21.1)
+Requirement already satisfied: requests>=2.31 in /home/vscode/.local/lib/python3.9/site-packages (from jupyterlab-server<3,>=2.22.1->notebook->jupyter) (2.31.0)
+Collecting fastjsonschema>=2.15 (from nbformat>=5.7->nbconvert->jupyter)
+  Downloading fastjsonschema-2.19.1-py3-none-any.whl.metadata (2.1 kB)
+Requirement already satisfied: wcwidth in /home/vscode/.local/lib/python3.9/site-packages (from prompt-toolkit>=3.0.30->jupyter-console->jupyter) (0.2.13)
+Collecting soupsieve>1.2 (from beautifulsoup4->nbconvert->jupyter)
+  Downloading soupsieve-2.5-py3-none-any.whl.metadata (4.7 kB)
+Requirement already satisfied: idna>=2.8 in /home/vscode/.local/lib/python3.9/site-packages (from anyio>=3.1.0->jupyter-server<3,>=2.4.0->notebook->jupyter) (3.6)
+Requirement already satisfied: sniffio>=1.1 in /home/vscode/.local/lib/python3.9/site-packages (from anyio>=3.1.0->jupyter-server<3,>=2.4.0->notebook->jupyter) (1.3.1)
+Collecting argon2-cffi-bindings (from argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->notebook->jupyter)
+  Downloading argon2_cffi_bindings-21.2.0-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.7 kB)
+Requirement already satisfied: certifi in /home/vscode/.local/lib/python3.9/site-packages (from httpx>=0.25.0->jupyterlab<4.2,>=4.1.1->notebook->jupyter) (2024.2.2)
+Requirement already satisfied: httpcore==1.* in /home/vscode/.local/lib/python3.9/site-packages (from httpx>=0.25.0->jupyterlab<4.2,>=4.1.1->notebook->jupyter) (1.0.5)
+Requirement already satisfied: h11<0.15,>=0.13 in /home/vscode/.local/lib/python3.9/site-packages (from httpcore==1.*->httpx>=0.25.0->jupyterlab<4.2,>=4.1.1->notebook->jupyter) (0.14.0)
+Requirement already satisfied: parso<0.9.0,>=0.8.3 in /home/vscode/.local/lib/python3.9/site-packages (from jedi>=0.16->ipython>=7.23.1->ipykernel->jupyter) (0.8.3)
+Requirement already satisfied: attrs>=22.2.0 in /home/vscode/.local/lib/python3.9/site-packages (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.22.1->notebook->jupyter) (23.2.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /home/vscode/.local/lib/python3.9/site-packages (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.22.1->notebook->jupyter) (2023.12.1)
+Requirement already satisfied: referencing>=0.28.4 in /home/vscode/.local/lib/python3.9/site-packages (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.22.1->notebook->jupyter) (0.34.0)
+Requirement already satisfied: rpds-py>=0.7.1 in /home/vscode/.local/lib/python3.9/site-packages (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.22.1->notebook->jupyter) (0.18.0)
+Collecting python-json-logger>=2.0.4 (from jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook->jupyter)
+  Downloading python_json_logger-2.0.7-py3-none-any.whl.metadata (6.5 kB)
+Requirement already satisfied: pyyaml>=5.3 in /home/vscode/.local/lib/python3.9/site-packages (from jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook->jupyter) (6.0.1)
+Collecting rfc3339-validator (from jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook->jupyter)
+  Downloading rfc3339_validator-0.1.4-py2.py3-none-any.whl.metadata (1.5 kB)
+Collecting rfc3986-validator>=0.1.1 (from jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook->jupyter)
+  Downloading rfc3986_validator-0.1.1-py2.py3-none-any.whl.metadata (1.7 kB)
+Requirement already satisfied: ptyprocess>=0.5 in /home/vscode/.local/lib/python3.9/site-packages (from pexpect>4.3->ipython>=7.23.1->ipykernel->jupyter) (0.7.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in /home/vscode/.local/lib/python3.9/site-packages (from requests>=2.31->jupyterlab-server<3,>=2.22.1->notebook->jupyter) (3.3.2)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /home/vscode/.local/lib/python3.9/site-packages (from requests>=2.31->jupyterlab-server<3,>=2.22.1->notebook->jupyter) (1.26.18)
+Requirement already satisfied: executing>=1.2.0 in /home/vscode/.local/lib/python3.9/site-packages (from stack-data->ipython>=7.23.1->ipykernel->jupyter) (2.0.1)
+Requirement already satisfied: asttokens>=2.1.0 in /home/vscode/.local/lib/python3.9/site-packages (from stack-data->ipython>=7.23.1->ipykernel->jupyter) (2.4.1)
+Requirement already satisfied: pure-eval in /home/vscode/.local/lib/python3.9/site-packages (from stack-data->ipython>=7.23.1->ipykernel->jupyter) (0.2.2)
+Collecting fqdn (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook->jupyter)
+  Downloading fqdn-1.5.1-py3-none-any.whl.metadata (1.4 kB)
+Collecting isoduration (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook->jupyter)
+  Downloading isoduration-20.11.0-py3-none-any.whl.metadata (5.7 kB)
+Requirement already satisfied: jsonpointer>1.13 in /home/vscode/.local/lib/python3.9/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook->jupyter) (2.4)
+Collecting uri-template (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook->jupyter)
+  Downloading uri_template-1.3.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting webcolors>=1.11 (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook->jupyter)
+  Downloading webcolors-1.13-py3-none-any.whl.metadata (2.6 kB)
+Requirement already satisfied: cffi>=1.0.1 in /home/vscode/.local/lib/python3.9/site-packages (from argon2-cffi-bindings->argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->notebook->jupyter) (1.16.0)
+Requirement already satisfied: pycparser in /home/vscode/.local/lib/python3.9/site-packages (from cffi>=1.0.1->argon2-cffi-bindings->argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->notebook->jupyter) (2.21)
+Collecting arrow>=0.15.0 (from isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook->jupyter)
+  Downloading arrow-1.3.0-py3-none-any.whl.metadata (7.5 kB)
+Collecting types-python-dateutil>=2.8.10 (from arrow>=0.15.0->isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.9.0->jupyter-server<3,>=2.4.0->notebook->jupyter)
+  Downloading types_python_dateutil-2.9.0.20240316-py3-none-any.whl.metadata (1.8 kB)
+Downloading jupyter-1.0.0-py2.py3-none-any.whl (2.7 kB)
+Downloading ipywidgets-8.1.2-py3-none-any.whl (139 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.4/139.4 kB 4.9 MB/s eta 0:00:00
+Downloading jupyter_console-6.6.3-py3-none-any.whl (24 kB)
+Downloading nbconvert-7.16.3-py3-none-any.whl (257 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 257.4/257.4 kB 8.9 MB/s eta 0:00:00
+Downloading notebook-7.1.2-py3-none-any.whl (5.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 44.1 MB/s eta 0:00:00
+Downloading qtconsole-5.5.1-py3-none-any.whl (123 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 123.4/123.4 kB 4.5 MB/s eta 0:00:00
+Downloading bleach-6.1.0-py3-none-any.whl (162 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 162.8/162.8 kB 6.2 MB/s eta 0:00:00
+Downloading jupyter_server-2.14.0-py3-none-any.whl (383 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 383.3/383.3 kB 13.2 MB/s eta 0:00:00
+Downloading jupyterlab-4.1.6-py3-none-any.whl (11.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.4/11.4 MB 51.4 MB/s eta 0:00:00
+Downloading jupyterlab_server-2.26.0-py3-none-any.whl (59 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.1/59.1 kB 2.1 MB/s eta 0:00:00
+Downloading jupyterlab_widgets-3.0.10-py3-none-any.whl (215 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.0/215.0 kB 8.1 MB/s eta 0:00:00
+Downloading mistune-3.0.2-py3-none-any.whl (47 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.0/48.0 kB 1.6 MB/s eta 0:00:00
+Downloading nbclient-0.10.0-py3-none-any.whl (25 kB)
+Downloading nbformat-5.10.4-py3-none-any.whl (78 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 2.9 MB/s eta 0:00:00
+Downloading notebook_shim-0.2.4-py3-none-any.whl (13 kB)
+Downloading pandocfilters-1.5.1-py2.py3-none-any.whl (8.7 kB)
+Downloading QtPy-2.4.1-py3-none-any.whl (93 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 93.5/93.5 kB 3.6 MB/s eta 0:00:00
+Downloading widgetsnbextension-4.0.10-py3-none-any.whl (2.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 39.5 MB/s eta 0:00:00
+Downloading beautifulsoup4-4.12.3-py3-none-any.whl (147 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 147.9/147.9 kB 5.6 MB/s eta 0:00:00
+Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+Downloading jupyterlab_pygments-0.3.0-py3-none-any.whl (15 kB)
+Downloading tinycss2-1.2.1-py3-none-any.whl (21 kB)
+Downloading argon2_cffi-23.1.0-py3-none-any.whl (15 kB)
+Downloading async_lru-2.0.4-py3-none-any.whl (6.1 kB)
+Downloading fastjsonschema-2.19.1-py3-none-any.whl (23 kB)
+Downloading json5-0.9.24-py3-none-any.whl (30 kB)
+Downloading jupyter_events-0.10.0-py3-none-any.whl (18 kB)
+Downloading jupyter_lsp-2.2.5-py3-none-any.whl (69 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.1/69.1 kB 2.4 MB/s eta 0:00:00
+Downloading jupyter_server_terminals-0.5.3-py3-none-any.whl (13 kB)
+Downloading overrides-7.7.0-py3-none-any.whl (17 kB)
+Downloading prometheus_client-0.20.0-py3-none-any.whl (54 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.5/54.5 kB 1.9 MB/s eta 0:00:00
+Downloading Send2Trash-1.8.3-py3-none-any.whl (18 kB)
+Downloading soupsieve-2.5-py3-none-any.whl (36 kB)
+Downloading terminado-0.18.1-py3-none-any.whl (14 kB)
+Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
+Downloading webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Downloading python_json_logger-2.0.7-py3-none-any.whl (8.1 kB)
+Downloading rfc3986_validator-0.1.1-py2.py3-none-any.whl (4.2 kB)
+Downloading argon2_cffi_bindings-21.2.0-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (86 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.2/86.2 kB 3.0 MB/s eta 0:00:00
+Downloading rfc3339_validator-0.1.4-py2.py3-none-any.whl (3.5 kB)
+Downloading webcolors-1.13-py3-none-any.whl (14 kB)
+Downloading fqdn-1.5.1-py3-none-any.whl (9.1 kB)
+Downloading isoduration-20.11.0-py3-none-any.whl (11 kB)
+Downloading uri_template-1.3.0-py3-none-any.whl (11 kB)
+Downloading arrow-1.3.0-py3-none-any.whl (66 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.4/66.4 kB 2.4 MB/s eta 0:00:00
+Downloading types_python_dateutil-2.9.0.20240316-py3-none-any.whl (9.7 kB)
+Installing collected packages: webencodings, fastjsonschema, widgetsnbextension, webcolors, uri-template, types-python-dateutil, tomli, tinycss2, terminado, soupsieve, send2trash, rfc3986-validator, rfc3339-validator, qtpy, python-json-logger, prometheus-client, pandocfilters, overrides, mistune, jupyterlab-widgets, jupyterlab-pygments, json5, fqdn, defusedxml, bleach, async-lru, jupyter-server-terminals, beautifulsoup4, arrow, argon2-cffi-bindings, isoduration, argon2-cffi, nbformat, ipywidgets, qtconsole, nbclient, jupyter-events, jupyter-console, nbconvert, jupyter-server, notebook-shim, jupyterlab-server, jupyter-lsp, jupyterlab, notebook, jupyter
+Successfully installed argon2-cffi-23.1.0 argon2-cffi-bindings-21.2.0 arrow-1.3.0 async-lru-2.0.4 beautifulsoup4-4.12.3 bleach-6.1.0 defusedxml-0.7.1 fastjsonschema-2.19.1 fqdn-1.5.1 ipywidgets-8.1.2 isoduration-20.11.0 json5-0.9.24 jupyter-1.0.0 jupyter-console-6.6.3 jupyter-events-0.10.0 jupyter-lsp-2.2.5 jupyter-server-2.14.0 jupyter-server-terminals-0.5.3 jupyterlab-4.1.6 jupyterlab-pygments-0.3.0 jupyterlab-server-2.26.0 jupyterlab-widgets-3.0.10 mistune-3.0.2 nbclient-0.10.0 nbconvert-7.16.3 nbformat-5.10.4 notebook-7.1.2 notebook-shim-0.2.4 overrides-7.7.0 pandocfilters-1.5.1 prometheus-client-0.20.0 python-json-logger-2.0.7 qtconsole-5.5.1 qtpy-2.4.1 rfc3339-validator-0.1.4 rfc3986-validator-0.1.1 send2trash-1.8.3 soupsieve-2.5 terminado-0.18.1 tinycss2-1.2.1 tomli-2.0.1 types-python-dateutil-2.9.0.20240316 uri-template-1.3.0 webcolors-1.13 webencodings-0.5.1 widgetsnbextension-4.0.10
+
