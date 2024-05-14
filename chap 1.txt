@@ -16,14 +16,39 @@ docker run -it \
 # Adjust the permissions of the folder if empty
 sudo chmod a+rwx ny_taxi_postgres_data
 
+
+
+~~ Connecting to Postgres with pgcli ~~
+
+~ Optional: ~
+__________________________________
+pip install pgcli
+pip install --upgrade pip
+pip install "psycopg[binary,pool]"
+__________________________________
+
 # Run pgcli to query Postgres DB
 pgcli -h localhost -p 5432 -u root -d ny_taxi
 
 # Password for pgcli connection
 root
 
-~ Inside pgcli connection and connected to Post gres DB:~
+~ Inside pgcli connection and connected to Postgres DB: ~
 # Test query
 select 1
 
-# Test query
+
+
+~~ Connecting to Postgres with Jupyter and Pandas (SQLAlchemy) ~~
+
+~ Optional: ~
+__________________________________
+pip install jupyter
+__________________________________
+
+# Run Jupyter Notebooks in Docker ~ Copy url and token (password) generated, and log on to Jupyter Notebooks) ~
+jupyter notebook
+
+
+
+~~ Connecting to Postgres with pgAdmin ~~
